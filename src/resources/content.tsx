@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Borish",
+  lastName: "Ningombam",
+  name: `Ningombam Borish Singh`,
+  role: "Full Stack Developer",
+  avatar: "/images/a.jpg",
+  email: "borishningombam@gmail.com",
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Manipuri"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -24,17 +24,17 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Borish1",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/ningombam-borish-singh-70b34a273/",
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/@borishningombamhpls",
   },
   {
     name: "Email",
@@ -49,12 +49,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Design-minded Code-driven Always learning</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Borish.dev</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -65,7 +65,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
+      I'm Borish, a full stack developer at Borish.dev
       <Logo
         dark
         icon="/trademarks/wordmark-dark.svg"
@@ -91,16 +91,14 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/borish-ningombam-7sdxtx",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Borish is a Tamil Nadu–based full-stack developer with a passion for turning complex ideas into intuitive digital experiences. His work spans responsive web apps, backend systems, and the intersection of design and engineering. Whether building client projects or experimenting after hours, he thrives on crafting solutions that are both elegant and scalable.
       </>
     ),
   },
@@ -109,45 +107,45 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Anshos Tech",
+        timeframe: "2025 March - Present",
+        role: "Full Stack Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Redesigned the UI/UX for my project platform, which improved user engagement by 20% 
+  and made the site load 30% faster.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+             Integrated AI tools into my workflow, helping me iterate designs 50% faster and 
+  deliver results more efficiently.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/cover-02.jpg",
+            alt: "achievenet image",
             width: 16,
             height: 9,
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+      // {
+      //   company: "Creativ3",
+      //   timeframe: "2018 - 2022",
+      //   role: "Lead Designer",
+      //   achievements: [
+      //     <>
+      //       Developed a design system that unified the brand across multiple platforms, improving
+      //       design consistency by 40%.
+      //     </>,
+      //     <>
+      //       Led a cross-functional team to launch a new product line, contributing to a 15% increase
+      //       in overall company revenue.
+      //     </>,
+      //   ],
+      //   images: [],
+      // },
     ],
   },
   studies: {
@@ -155,8 +153,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Rohini College of Engineering and Technology",
+        description: <>Computer Science and Engineering.</>,
       },
       {
         name: "Build the Future",
@@ -169,61 +167,61 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
+  title: "Next.js",
+  description: (
+    <>I can build full-stack web applications in Next.js with clean UI and optimized performance.</>
+  ),
+  tags: [
+    {
+      name: "Next.js",
+      icon: "nextjs",
+    },
+  ],
+  images: [
+    {
+      src: "/images/projects/project-01/cover-03.jpg",
+      alt: "Next.js project preview",
+      width: 16,
+      height: 9,
+    },
+    {
+      src: "/images/projects/project-01/cover-01.jpg",
+      alt: "Next.js dashboard showcase",
+      width: 16,
+      height: 9,
+    },
+  ],
+}
+,
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+  title: "PostgreSQL",
+  description: (
+    <>Designing and managing relational databases with PostgreSQL, including stored procedures and optimized queries.</>
+  ),
+  tags: [
+    {
+      name: "SQL",
+      icon: "sql",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "postgresql",
+    },
+    {
+      name: "Database Design",
+      icon: "database",
+    },
+  ],
+  images: [
+    {
+      src: "/images/projects/project-01/cover-04.jpg",
+      alt: "PostgreSQL database design",
+      width: 16,
+      height: 9,
+    },
+  ],
+}
+,  
     ],
   },
 };

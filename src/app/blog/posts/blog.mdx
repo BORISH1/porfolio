@@ -1,71 +1,29 @@
 ---
-title: "Create, edit and delete blog posts"
-summary: "Create, edit and delete posts in the blog section of your Magic Portfolio."
+title: "Building my Job Platform Project"
+summary: "Sharing my journey of creating a platform that connects skilled people with job seekers, using Next.js, PostgreSQL, and Supabase."
 publishedAt: "2025-03-17"
-tag: "Magic Portfolio"
+tag: "My Projects"
 ---
 
-## Manage posts
+## Project Journey
 
-You can create, edit and delete posts by adding, modifying or removing `*.mdx` files in the `src/app/blog/posts` directory.
+I’m working on a job platform project where skilled individuals (like plumbers, carpenters, tutors, and freelancers) can connect with people looking for their services.  
+This is one of my main projects during my Computer Science Engineering studies.
 
-## Frontmatter
+## Tech Stack
 
-The frontmatter is used to set the post's metadata: title, description, image, and tags. It's used in the post's page and in meta- and open graph tags.
+The backend and database are managed with **PostgreSQL** (I even wrote custom SQL functions for insert, update, delete, and reporting).  
+For the frontend, I’m building with **Next.js** and **React**, while using **Supabase** to simplify authentication and database integration.  
 
-<CodeBlock
-    marginBottom="16"
-    codes={[
-      {
-        code:
-`---
-title: "Arriving to a new milestone in my career"
-publishedAt: "2024-04-08"
-image: "/images/gallery/img-02.jpg"
-summary: "Every career is a journey, filled with challenges, growth, and those significant moments that mark a shift in our path."
-tag: "Journal"
----`,
-        language: "tsx",
-        label: "src/app/blog/posts/post-1.mdx"
-      }
-    ]}
-/>
+## Example Metadata
 
-## MDX syntax
+Here’s an example of how I keep project details structured in my blog posts:
 
-You can use MDX to write the content of your posts. It helps you write rich and dynamic content with minimal code. Some MDX elements will be automatically transformed to Once UI components to integrate better in the design and add additional functionality.
-
-## Custom components
-
-You can use custom components in MDX files, but you need to import them first in the `src/components/mdx.tsx` file.
-
-<CodeBlock
-    marginBottom="16"
-    highlight="11-12"
-    codes={[
-      {
-        code:
-`const components = {
-    p: createParagraph as any,
-    h1: createHeading(1) as any,
-    h2: createHeading(2) as any,
-    h3: createHeading(3) as any,
-    h4: createHeading(4) as any,
-    h5: createHeading(5) as any,
-    h6: createHeading(6) as any,
-    img: createImage as any,
-    a: CustomLink as any,
-    Table,
-    CodeBlock,
-};`,
-        language: "tsx",
-        label: "src/components/mdx.tsx"
-      }
-    ]}
-/>
-
-As you can see, the `Table` and `CodeBlock` components are already imported and available for use. You can add more by simply importing them to this file and passing them to the `components` object.
-
-## Hot reload
-
-Hot reload of MDX files is currently not supported, but we're working on it.
+```tsx
+---
+title: "SkilledLink – Connecting Skilled People"
+publishedAt: "2025-02-10"
+image: "/images/projects/job-platform-cover.jpg"
+summary: "A full-stack platform I built to connect skilled professionals with people searching for their services."
+tag: "Projects"
+---

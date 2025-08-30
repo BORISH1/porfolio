@@ -1,21 +1,23 @@
 ---
-title: "Updating the content of Magic Portfolio"
-summary: "Personalize the portfolio template with your own content."
+title: "Updating the content of My Portfolio"
+summary: "Personalize my portfolio template with my own content."
 publishedAt: "2025-04-18"
-tag: "Magic Portfolio"
+tag: "Portfolio"
 ---
 
 ## Avatar
 
-Replace the `public/images/avatar.jpg` file with your own avatar image. It is used on the `/about` page as well as on the dynamically generated `open-graph` images.
+Replace the `public/images/avatar.jpg` file with my own profile picture.  
+It will appear on the `/about` page and in the dynamically generated open-graph images.
 
 ## Favicon
 
-Replace the `src/app/favicon.ico` file with your own favicon.
+Replace the `src/app/favicon.ico` file with my own favicon.
 
 ## Content
 
-Replace the content in the `resources/content.js` file with your own content. You can use custom components in most cases, since the props are usually declared as `ReactNode` instead of `string`, but it's important that you need to import them in the file.
+Update the `resources/content.js` file with my own details.  
+I can also use custom components, but I need to import them before using.
 
 <CodeBlock
     marginBottom="16"
@@ -34,11 +36,12 @@ const person = {
   }
 ]} />
 
-The imports above would let us use `InlineCode` and `Link` components in the content file.
+---
 
 ### Personal details
 
-Your personal details are used across the whole app to render personalized headings, labels and images. Languages are displayed on the `/about` page, and location and time in the header.
+My personal details are displayed across the app (headings, labels, images).  
+Languages are shown on `/about`, and location/time in the header.
 
 <CodeBlock
     marginBottom="16"
@@ -47,24 +50,27 @@ Your personal details are used across the whole app to render personalized headi
   {
     code:
 `const person = {
-    firstName: "Selene",
-    lastName: "Yu",
+    firstName: "Borish",
+    lastName: "Ningombam",
     get name() {
-      return "...";
+      return "Borish Ningombam";
     },
-    role: "Design Engineer",
+    role: "Computer Science Student & Developer",
     avatar: "/images/avatar.jpg",
-    location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+    location: "Asia/Kolkata", 
+    languages: ["English", "Hindi", "Manipuri"],
 };`,
     language: "tsx",
     label: "src/app/resources/content.js"
   }
 ]} />
 
+---
+
 ### Social links
 
-Social links are rendered on the `/about` page and in the footer based on the array configured in the `social` object. You can set custom icons to each, but don't forget to import them in `src/once-ui/icons.ts`. Read the Once UI documentation](https://once-ui.com/docs/icons) for more information.
+My social links will appear on `/about` and in the footer.  
+I can add any I want (GitHub, LinkedIn, Email, etc.).
 
 <CodeBlock
     marginBottom="16"
@@ -75,12 +81,17 @@ Social links are rendered on the `/about` page and in the footer based on the ar
     {
       name: "GitHub",
       icon: "github",
-      link: "https://github.com/once-ui-system/nextjs-starter",
+      link: "https://github.com/borish-ningombam",
+    },
+    {
+      name: "LinkedIn",
+      icon: "linkedin",
+      link: "https://linkedin.com/in/borish-ningombam",
     },
     {
       name: "Email",
       icon: "email",
-      link: "mailto:lorant@once-ui.com",
+      link: "mailto:borish@example.com",
     },
 ];`,
     language: "tsx",
@@ -88,9 +99,11 @@ Social links are rendered on the `/about` page and in the footer based on the ar
   }
 ]} />
 
+---
+
 ### Pages
 
-Each page have it's own object that manages the personalized content, such as headings, subheadings, images and dynamic data.
+Each page has its own object that manages headings, descriptions, and dynamic data.
 
 <CodeBlock
     marginBottom="16"
@@ -99,13 +112,13 @@ Each page have it's own object that manages the personalized content, such as he
     code:
 `const home = {
     label: "Home",
-    title: "Selene Yu's Portfolio",
-    description: "Portfolio website showcasing my work as a Design Engineer",
-    headline: <>Design engineer and builder</>,
+    title: "Borish Ningombam's Portfolio",
+    description: "Portfolio website showcasing my projects, skills, and journey as a Computer Science student and developer.",
+    headline: <>Aspiring Computer Scientist & Problem Solver</>,
     subline: (
       <>
-        I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-        <br /> user experiences. After hours, I build my own projects.
+        I'm Borish, a CSE student preparing for GATE and building full-stack projects.
+        <br /> I love solving problems, exploring new tech, and sharing my journey.
       </>
     ),
 };`,
@@ -113,5 +126,3 @@ Each page have it's own object that manages the personalized content, such as he
     label: "src/app/resources/content.js"
   }
 ]} />
-
-The `label` property is used in the header navigation. The `title` property is used for the page title and the `description` property is used for the page description. They are also used in meta- and open graph tags.
