@@ -9,6 +9,7 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
+import React from "react";
 
 interface ProjectCardProps {
   href: string;
@@ -88,3 +89,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     </Column>
   );
 };
+
+interface ProjectsProps {
+  range: [number, number];
+  exclude?: any;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ range, exclude }) => {
+  return (
+    <div>
+      {/* Render your projects here */}
+      <p>Projects range: {range.join(", ")}</p>
+    </div>
+  );
+};
+
+export default Projects;
